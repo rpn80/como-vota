@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Como vota, Deputado?</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/quasar@2.7.7/dist/quasar.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="q-app" style="min-height: 100vh;">
+  <div class="q-pa-md q-gutter-sm">
+    <q-card>
+      <q-tabs v-model="tab" class="text-teal">
+        <q-tab name="assuntos" label="Opine"> </q-tab>
+        <q-tab name="ranking" label="Confira"> </q-tab>
+      </q-tabs>
+      <q-separator></q-separator>
+      <q-tab-panels v-model="tab" animated swipeable transition-prev="jump-up" transition-next="jump-up">
+        <q-tab-panel name="assuntos">
+          <div v-for="(vot, i) in votacoes" :key="i">
+            <q-toggle toggle-indeterminate :label="vot.nome" v-model="vot.valor" :true-value="vot.verdadeiro" :false-value="vot.falso" color="green" checked-icon="thumb_up" indeterminate-icon="question_mark" unchecked-icon="thumb_down" size="xl"></q-toggle>
+            <q-separator></q-separator>
+          </div>
+        </q-tab-panel>
+        <q-tab-panel name="ranking">
+          <q-select v-model="filtro_estado" :options="['Todos','AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO']" label="Filtrar Deputados por Estado"></q-select>
+          <q-checkbox v-model="mostra_partidos" label="Partidos"></q-checkbox>
+          <q-checkbox v-model="mostra_deputados" label="Deputados"></q-checkbox>
+          <div v-for="(item, index) in resultado" :key="index">
+            <q-list>
+              <q-item>
+                <q-item-section avatar>
+                  <q-avatar rounded>
+                    <img :src="item.logo">
+                  </q-avatar>
+                </q-item-section>
+                <q-item-section>
+                  <q-item-label>{{ item.nome }}</q-item-label>
+                  <q-item-label caption>{{ item.desc }}</q-item-label>
+                </q-item-section>
+                <q-item-section side top>
+                  <q-badge color="teal" :label="item.nota"></q-badge>
+                  <q-separator spaced></q-separator>
+                  <!--q-item-label caption>{{ item.total_votos }} voto(s)</q-item-label-->
+                </q-item-section>
+              </q-item>
+              <q-separator spaced inset></q-separator>
+            </q-list>
+          </div>
+        </q-tab-panel>
+      </q-tab-panels>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/quasar@2.7.7/dist/quasar.umd.prod.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

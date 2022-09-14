@@ -1,0 +1,13 @@
+.q-toggle__inner--falsy .q-toggle__thumb:after {
+  background-color: rgb(244, 67, 54);
+}
+.q-toggle__inner--falsy .q-toggle__thumb .q-icon {
+  color: white;
+  opacity: 1;
+}
+.q-toggle__inner--falsy .q-toggle__track {
+  background-color: red;
+}
+.q-avatar img {
+  object-fit: contain !important;
+}
