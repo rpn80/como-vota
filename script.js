@@ -219,6 +219,12 @@ const app = Vue.createApp({
 					logo: c.foto,
 					desc: c.partido + "-" + c.siglaUf,
 					tipo: "deputado",
+					total_votos: this.votacoes.filter(
+					    (v) =>
+					    v.valor != null &&
+					    v.votacao.some((cc) => cc.id === c.id) &&
+					    v.votacao.find((cc) => cc.id === c.id).voto === v.valor
+					  ).length,
 					nota: (
 						10 *
 						this.votacoes.filter(
@@ -291,6 +297,7 @@ const app = Vue.createApp({
 						this.tabela_partidos.find(pp => pp.sigla === p.nome).nome : "",
 					logo: this.tabela_partidos.find(pp => pp.sigla === p.nome) ?
 						this.tabela_partidos.find(pp => pp.sigla === p.nome).logo : "",
+					total_votos: p.votos_alinhados,
 					nota: (10 * (p.votos_alinhados / p.total_votos)).toFixed(1)
 				};
 
