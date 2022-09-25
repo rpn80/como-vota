@@ -29,10 +29,20 @@
       <q-separator></q-separator>
       <q-tab-panels v-model="tab" animated swipeable transition-prev="jump-up" transition-next="jump-up">
         <q-tab-panel name="assuntos">
-          <div v-for="(vot, i) in votacoes" :key="i">
-            <q-toggle toggle-indeterminate :label="vot.nome" v-model="vot.valor" :true-value="vot.verdadeiro" :false-value="vot.falso" color="green" checked-icon="thumb_up" indeterminate-icon="question_mark" unchecked-icon="thumb_down" size="xl"></q-toggle>
-            <q-separator></q-separator>
-          </div>
+          <q-list>
+            <div v-for="(vot, i) in votacoes" :key="i">
+              <q-item tag="label" v-ripple>
+                <q-item-section>
+                  <q-item-label>{{ vot.nome }}</q-item-label>
+                  <q-item-label caption>{{ vot.desc }}</q-item-label>
+                </q-item-section>
+                <q-item-section avatar>
+                  <q-toggle toggle-indeterminate v-model="vot.valor" :true-value="vot.verdadeiro" :false-value="vot.falso" color="green" checked-icon="thumb_up" indeterminate-icon="question_mark" unchecked-icon="thumb_down" size="xl"></q-toggle>
+                </q-item-section>
+              </q-item>
+              <q-separator></q-separator>
+            </div>
+          </q-list>
         </q-tab-panel>
         <q-tab-panel name="ranking">
           <q-select v-model="filtro_estado" :options="['Todos','AC','AL','AP','AM','BA','CE','DF','ES','GO','MA','MT','MS','MG','PA','PB','PR','PE','PI','RJ','RN','RS','RO','RR','SC','SP','SE','TO']" label="Filtrar Deputados por Estado"></q-select>
