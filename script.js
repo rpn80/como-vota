@@ -11,139 +11,124 @@ const app = Vue.createApp({
 			mostra_partidos: true,
 			tabela_partidos: [],
 			filtro_estado: "Todos",
-			votacoes: [{
-					id: "2329218-162",
-					nome: "AUXÍLIO EMERGENCIAL PERMANENTE NO VALOR DE R$ 600",
-					desc: "desc",
-					verdadeiro: "Não",
-					falso: "Sim",
-					valor: ref(null),
-					votacao: []
-				},
-
+			votacoes: [
 				{
-					id: "2199763-83",
-					nome: "TRABALHO AOS DOMINGOS E FERIADOS SEM PAGAMENTO ADICIONAL DA HORA TRABALHADA",
-					desc: "desc",
-					verdadeiro: "Sim",
-					falso: "Não",
-					valor: ref(null),
-					votacao: []
-				},
-
-				{
-					id: "46249-297",
-					nome: "LIBERAÇÃO DE AGROTÓXICO NO PAÍS",
-					desc: "desc",
-					verdadeiro: "Sim",
-					falso: "Não",
-					valor: ref(null),
-					votacao: []
-				},
-
-				{
-					id: "257161-337",
-					nome: "FLEXIBILIZAÇÃO DO LICENCIAMENTO AMBIENTAL",
-					desc: "desc",
-					verdadeiro: "Sim",
-					falso: "Não",
-					valor: ref(null),
-					votacao: []
-				},
-
-				{
-					id: "2270789-73",
-					nome: "PRIVATIZAÇÃO DA ELETROBRÁS",
-					desc: "desc",
-					verdadeiro: "Sim",
-					falso: "Não",
-					valor: ref(null),
-					votacao: []
-				},
-
-				{
-					id: "2220292-229",
-					nome: "TORNAR OBRIGATÓRIO O VOTO IMPRESSO",
-					desc: "desc",
-					verdadeiro: "Sim",
-					falso: "Não",
-					valor: ref(null),
-					votacao: []
-				},
-
-				{
-					id: "534328-167",
-					nome: "REGULAMENTAÇÃO DO HOMESCHOOLING",
-					desc: "desc",
-					verdadeiro: "Sim",
-					falso: "Não",
-					valor: ref(null),
-					votacao: []
-				},
-
-				{
-					id: "2251392-74",
-					nome: "CONGELAMENTO DE SALÁRIO DOS SERVIDORES PÚBLICOS",
-					desc: "desc",
-					verdadeiro: "Sim",
-					falso: "Não",
-					valor: ref(null),
-					votacao: []
-				},
-
-				{
-					id: "2313734-73",
-					nome: "VOLTA DO DESPACHO GRATUITO DE BAGAGEM EM VOOS",
-					desc: "desc",
-					verdadeiro: "Sim",
-					falso: "Não",
-					valor: ref(null),
-					votacao: []
+				  id: "2329218-162",
+				  nome: "AUXÍLIO EMERGENCIAL PERMANENTE NO VALOR DE R$ 600",
+				  desc: "PEC 15/2022",
+				  verdadeiro: "Não",
+				  falso: "Sim",
+				  valor: ref(null),
+				  votacao: []
 				},
 				{
-					id: "15460-165",
-					nome: "LEGALIZAÇÃO DOS 'JOGOS DE AZAR'",
-					desc: "desc",
-					verdadeiro: "Sim",
-					falso: "Não",
-					valor: ref(null),
-					votacao: []
+				  id: "2199763-83",
+				  nome:
+				    "TRABALHO AOS DOMINGOS E FERIADOS SEM PAGAMENTO ADICIONAL DA HORA TRABALHADA",
+				  desc: "MP 881/2019",
+				  verdadeiro: "Sim",
+				  falso: "Não",
+				  valor: ref(null),
+				  votacao: []
 				},
 				{
-					id: "2184458-172",
-					nome: "FLEXIBILIZAÇÃO DE REGRAS CONTRA O NEPOTISMO",
-					desc: "desc",
-					verdadeiro: "Sim",
-					falso: "Não",
-					valor: ref(null),
-					votacao: []
+				  id: "46249-297",
+				  nome: "LIBERAÇÃO DE AGROTÓXICO NO PAÍS",
+				  desc: "PL 6299/2002",
+				  verdadeiro: "Sim",
+				  falso: "Não",
+				  valor: ref(null),
+				  votacao: []
 				},
 				{
-					id: "2275537-128",
-					nome: "ENFRAQUECIMENTO DO MINITÉRIO PÚBLICO",
-					desc: "desc",
-					verdadeiro: "Sim",
-					falso: "Não",
-					valor: ref(null),
-					votacao: []
+				  id: "257161-337",
+				  nome: "FLEXIBILIZAÇÃO DO LICENCIAMENTO AMBIENTAL",
+				  desc: "PL 3729/2004",
+				  verdadeiro: "Sim",
+				  falso: "Não",
+				  valor: ref(null),
+				  votacao: []
 				},
 				{
-					id: "2288389-98",
-					nome: "TRIBUTAÇÃO DE LUCROS E DIVIDENDOS",
-					desc: "desc",
-					verdadeiro: "Sim",
-					falso: "Não",
-					valor: ref(null),
-					votacao: []
+				  id: "2270789-73",
+				  nome: "PRIVATIZAÇÃO DA ELETROBRÁS",
+				  desc: "MP 1031/2021",
+				  verdadeiro: "Sim",
+				  falso: "Não",
+				  valor: ref(null),
+				  votacao: []
 				},
 				{
-					id: "1301128-43",
-					nome: "TIPIFICAÇÃO DE INJÚRIA RACIAL COMO RACISMO",
-					desc: "desc",
-					verdadeiro: "Sim",
-					falso: "Não",
-					valor: ref(null),
-					votacao: []
+				  id: "2220292-229",
+				  nome: "TORNAR OBRIGATÓRIO O VOTO IMPRESSO",
+				  desc: "PEC 135/2019",
+				  verdadeiro: "Sim",
+				  falso: "Não",
+				  valor: ref(null),
+				  votacao: []
+				},
+				{
+				  id: "534328-167",
+				  nome: "REGULAMENTAÇÃO DO HOMESCHOOLING",
+				  desc: "PL 3179/2012",
+				  verdadeiro: "Sim",
+				  falso: "Não",
+				  valor: ref(null),
+				  votacao: []
+				},
+				{
+				  id: "2313734-73",
+				  nome: "VOLTA DO DESPACHO GRATUITO DE BAGAGEM EM VOOS",
+				  desc: "MP 1089/2021",
+				  verdadeiro: "Sim",
+				  falso: "Não",
+				  valor: ref(null),
+				  votacao: []
+				},
+				{
+				  id: "15460-165",
+				  nome: "LEGALIZAÇÃO DOS 'JOGOS DE AZAR'",
+				  desc: "PL 442/1991",
+				  verdadeiro: "Sim",
+				  falso: "Não",
+				  valor: ref(null),
+				  votacao: []
+				},
+				{
+				  id: "2184458-172",
+				  nome: "FLEXIBILIZAÇÃO DE REGRAS CONTRA O NEPOTISMO",
+				  desc: "PL 2505/2021",
+				  verdadeiro: "Sim",
+				  falso: "Não",
+				  valor: ref(null),
+				  votacao: []
+				},
+				{
+				  id: "2275537-128",
+				  nome: "ENFRAQUECIMENTO DO MINITÉRIO PÚBLICO",
+				  desc: "PEC 5/2021",
+				  verdadeiro: "Sim",
+				  falso: "Não",
+				  valor: ref(null),
+				  votacao: []
+				},
+				{
+				  id: "2288389-98",
+				  nome: "TRIBUTAÇÃO DE LUCROS E DIVIDENDOS",
+				  desc: "PL 2337/2021",
+				  verdadeiro: "Sim",
+				  falso: "Não",
+				  valor: ref(null),
+				  votacao: []
+				},
+				{
+				  id: "1301128-43",
+				  nome: "TIPIFICAÇÃO DE INJÚRIA RACIAL COMO RACISMO",
+				  desc: "PL 4373/2020",
+				  verdadeiro: "Sim",
+				  falso: "Não",
+				  valor: ref(null),
+				  votacao: []
 				}
 			]
 		};
