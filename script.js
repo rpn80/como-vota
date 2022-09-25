@@ -33,7 +33,7 @@ const app = Vue.createApp({
 				},
 				{
 				  id: "46249-297",
-				  nome: "LIBERAÇÃO DE AGROTÓXICO NO PAÍS",
+				  nome: "FLEXIBILIZAÇÃO DO USO DE AGROTÓXICOS",
 				  desc: "PL 6299/2002",
 				  verdadeiro: "Sim",
 				  falso: "Não",
@@ -69,7 +69,7 @@ const app = Vue.createApp({
 				},
 				{
 				  id: "534328-167",
-				  nome: "REGULAMENTAÇÃO DO HOMESCHOOLING",
+				  nome: "REGULAMENTAÇÃO DO HOMESCHOOLING (EDUCAÇÃO ESCOLAR EM CASA)",
 				  desc: "PL 3179/2012",
 				  verdadeiro: "Sim",
 				  falso: "Não",
@@ -105,7 +105,7 @@ const app = Vue.createApp({
 				},
 				{
 				  id: "2275537-128",
-				  nome: "ENFRAQUECIMENTO DO MINITÉRIO PÚBLICO",
+				  nome: "REDUÇÃO DA AUTONOMIA DO MINITÉRIO PÚBLICO",
 				  desc: "PEC 5/2021",
 				  verdadeiro: "Sim",
 				  falso: "Não",
